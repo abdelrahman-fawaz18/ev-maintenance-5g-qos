@@ -1,0 +1,104 @@
+experiment_id: evside_10mhz_ofdma_stochastic_transition_20260820_230608
+status: audited-pass
+simulator:
+  ns3: ns-3.47
+  five_g_lena: v4.2
+scenarios:
+- baseline
+- slicing
+loads_mbps:
+- 0.0
+- 5.0
+- 10.0
+- 15.0
+- 20.0
+- 22.0
+- 23.0
+- 24.0
+- 24.5
+- 25.0
+- 25.5
+- 26.0
+- 26.5
+- 27.0
+- 27.5
+- 28.0
+- 28.5
+- 29.0
+- 29.5
+- 30.0
+- 31.0
+- 32.0
+- 33.0
+- 34.0
+- 35.0
+- 40.0
+seeds:
+- 1
+- 2
+- 3
+- 4
+- 5
+- 6
+- 7
+- 8
+- 9
+- 10
+- 11
+- 12
+- 13
+- 14
+- 15
+- 16
+- 17
+- 18
+- 19
+- 20
+- 21
+- 22
+- 23
+- 24
+- 25
+- 26
+- 27
+- 28
+- 29
+- 30
+- 31
+- 32
+- 33
+- 34
+- 35
+- 36
+- 37
+- 38
+- 39
+- 40
+- 41
+- 42
+- 43
+- 44
+- 45
+- 46
+- 47
+- 48
+- 49
+- 50
+run_count: 2600
+bootstrap:
+  iterations: 10000
+  confidence: 0.95
+paired_design:
+  keys:
+  - ev_background_load_mbps
+  - seed
+  - traffic_class
+  comparison: metric_specific_differences_with_positive_effects_favoring_qos_aware
+source_fingerprints_sha256:
+  paper_sweep_yaml: 47fcd9ea0da8aad0f63e54b4dd785070dfb913e3beff4b98f69288d28872d83d
+  paper_traffic_yaml: 85b5d12b0f04762309ff9583481b4a761c88d12648d364e252e6492a31109850
+  paper_baseline_yaml: 08e891d177ab52fe41be38436d5d673a1b8960a8bab32f2d973fb3fbdc95af1f
+  paper_slicing_yaml: 091275972570dd4ac7468638af7bfa5f82a280e61c0c9dceaa24730b1139dadb
+  analysis_script: f534a7b1c6ff8799aa37de143fe4d4a329f1a770f2cb1c4e9a014d1212824202
+  simulation_source: 407c14ca7f3309bff485707d5506a6d0872de46b17a61b82eb854e58ab4536a5
+raw_artifacts_in_git: false

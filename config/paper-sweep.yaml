@@ -1,0 +1,41 @@
+# Paper-aligned paired sweep. The full design contains 2,600 runs:
+# 2 RAN policies x 26 load points x 50 independent seeds.
+
+experiment:
+  name: evside_10mhz_ofdma_stochastic_transition
+  output_root: artifacts/sweeps
+  duration_s: 60.0
+  bin_width_s: 0.01
+
+templates:
+  baseline: config/paper-baseline.yaml
+  slicing: config/paper-slicing.yaml
+
+scenarios:
+  - baseline
+  - slicing
+
+seeds: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+        11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+        31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
+        41, 42, 43, 44, 45, 46, 47, 48, 49, 50]
+ev_background_loads_mbps: [0, 5, 10, 15, 20, 22, 23, 24, 24.5, 25, 25.5, 26, 26.5, 27, 27.5, 28, 28.5, 29, 29.5, 30, 31, 32, 33, 34, 35, 40]
+
+radio:
+  bandwidth_hz: 10000000
+
+external_background:
+  enabled: false
+
+ev_background:
+  packet_size_B: 1200
+  udp_port: 5000
+  start_s: 0.0
+  stop_s: 60.0
+
+runner:
+  stop_on_failure: true
+  validate_each_run: true
+  plot_each_run: false
+  selected_cdf_loads_mbps: [15, 22, 24, 25.5, 28, 30, 35, 40]

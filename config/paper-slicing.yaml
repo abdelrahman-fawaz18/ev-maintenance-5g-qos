@@ -1,0 +1,131 @@
+# Published slice-aware policy: dedicated ALERT/FAULT QoS flows with QoS-aware scheduling.
+
+run:
+  name: evnr-maintenance-slicing-stochastic
+  output_root: artifacts/runs
+  traffic_config_path: config/paper-traffic.yaml
+  app_start_offset_s: 1.0
+  traffic_rng_stream_base: 100000
+  drain_s: 5.0
+  enable_nr_traces: false
+
+scenario:
+  mode: slice
+  activate_dedicated_qos_flows: true
+
+scheduler:
+  # In 5G-LENA v4.2, OFDMA affects DL; UL remains TDMA-oriented.
+  access: ofdma
+  type: qos
+
+core:
+  remote_host_link_data_rate: 100Gb/s
+  remote_host_link_mtu: 2500
+  remote_host_link_delay_s: 0.0
+
+radio:
+  scenario: UMi
+  center_frequency_hz: 3500000000
+  bandwidth_hz: 10000000
+  bwp_count: 1
+  numerology: 1
+  tdd_pattern: DL|UL|UL|UL|DL|UL|UL|DL|UL|UL|
+  gnb_tx_power_dbm: 38.0
+  ue_tx_power_dbm: 23.0
+  gnb_antenna_rows: 2
+  gnb_antenna_columns: 2
+  ue_antenna_rows: 1
+  ue_antenna_columns: 2
+  shadowing_enabled: true
+  channel_update_period_ms: 20.0
+  channel_condition_update_period_ms: 0.0
+  always_los: true
+  harq_enabled: true
+
+mobility:
+  gnb_x_m: 0.0
+  gnb_y_m: 0.0
+  gnb_z_m: 10.0
+  ue_x_m: 50.0
+  ue_y_m: 0.0
+  ue_z_m: 1.5
+  ue_speed_mps: 0.0
+
+background:
+  enabled: false
+  ue_count: 0
+  load_mode: aggregate
+  offered_load_mbps: 0.0
+  packet_size_B: 1200
+  udp_port: 4999
+  start_s: 0.0
+  stop_s: 60.0
+  x_start_m: 60.0
+  y_start_m: 10.0
+  z_m: 1.5
+  x_spacing_m: 5.0
+  y_spacing_m: 0.0
+
+ev_background:
+  enabled: false
+  offered_load_mbps: 0.0
+  packet_size_B: 1200
+  udp_port: 5000
+  start_s: 0.0
+  stop_s: 60.0
+
+qos:
+  diag:
+    dedicated_qos_flow_enabled: false
+    five_qi: NGBR_VIDEO_TCP_DEFAULT
+    rule_precedence: 90
+    arp_priority: 9
+    latency_deadline_ms: 300
+    pdr_target: 0.95
+    preemption_capability: false
+    preemption_vulnerability: true
+    gbr_ul_bps: 0
+    mbr_ul_bps: 0
+    gbr_dl_bps: 0
+    mbr_dl_bps: 0
+  alert:
+    dedicated_qos_flow_enabled: true
+    five_qi: GBR_GAMING
+    rule_precedence: 50
+    arp_priority: 6
+    latency_deadline_ms: 50
+    pdr_target: 0.99
+    preemption_capability: true
+    preemption_vulnerability: true
+    # GBR is mean IP-layer rate; MBR allows stochastic short-window bursts.
+    gbr_ul_bps: 30240
+    mbr_ul_bps: 60480
+    gbr_dl_bps: 0
+    mbr_dl_bps: 0
+  fault:
+    dedicated_qos_flow_enabled: true
+    five_qi: DGBR_DISCRETE_AUT_LARGE
+    rule_precedence: 10
+    arp_priority: 1
+    latency_deadline_ms: 10
+    pdr_target: 0.9999
+    preemption_capability: true
+    preemption_vulnerability: false
+    # GBR is mean IP-layer rate; MBR allows stochastic short-window bursts.
+    gbr_ul_bps: 867200
+    mbr_ul_bps: 1300800
+    gbr_dl_bps: 0
+    mbr_dl_bps: 0
+
+flow_monitor:
+  delay_bin_width_s: 0.0005
+  jitter_bin_width_s: 0.0005
+  packet_size_bin_width_B: 20.0
+
+logging:
+  app_tx_trace_csv: maintenance_nr_app_tx_packets.csv
+  flow_summary_csv: maintenance_nr_flow_summary.csv
+  delay_histogram_csv: maintenance_nr_delay_histogram.csv
+  run_metadata_txt: run_metadata.txt
+  run_manifest_csv: run_manifest.csv
+  flow_monitor_xml: flow-monitor.xml

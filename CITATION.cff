@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+title: "Reliability-Aware 5G QoS for Remote EV Maintenance"
+type: software
+authors:
+  - family-names: Elsayed
+    given-names: Abdelrahman
+version: 1.0.0
+date-released: 2026-08-21
+license: GPL-2.0-only
+repository-code: "https://github.com/abdelrahman-fawaz18/ev-maintenance-5g-qos"
+url: "https://github.com/abdelrahman-fawaz18/ev-maintenance-5g-qos"
+abstract: >-
+  A reproducible ns-3/5G-LENA implementation and experiment pipeline for
+  evaluating maintenance-aware 5G QoS treatment of electric-vehicle uplink
+  telemetry under congestion.
+keywords:
+  - 5G
+  - ns-3
+  - 5G-LENA
+  - electric vehicles
+  - network slicing
+  - quality of service
+  - reproducible research

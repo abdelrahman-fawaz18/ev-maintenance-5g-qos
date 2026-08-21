@@ -1,0 +1,17 @@
+# Build and experiment products
+artifacts/
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+
+# Local ns-3 integrations and generated result caches
+ns3-workspace/
+results/.staging/

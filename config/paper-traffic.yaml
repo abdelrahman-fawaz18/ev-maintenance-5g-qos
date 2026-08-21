@@ -1,0 +1,79 @@
+# Paper-aligned EV maintenance traffic model.
+# DIAG remains deterministic at 10 Hz. ALERT and FAULT use lognormal
+# inter-arrival times with the published means and coefficients of variation.
+
+sim:
+  duration_s: 60.0
+
+rng:
+  seed: 1
+  run: 1
+
+validation:
+  max_udp_payload_B: 1472
+
+logging:
+  tx_trace_enable: true
+  print_summary: true
+  packet_trace_csv: maintenance_smoke_tx_packets.csv
+
+smoke_test:
+  p2p_data_rate: 100Gbps
+  p2p_delay: 1ms
+  network_base: 10.1.1.0
+  network_mask: 255.255.255.0
+
+plotting:
+  bin_width_s: 0.01
+  paper_style_figure_png: maintenance_smoke_generated_traffic_paper_style.png
+  load_summary_figure_png: maintenance_smoke_generated_traffic_load_summary.png
+
+diag:
+  # Routine telemetry remains periodic. This isolates stochasticity to the
+  # event-driven and detailed-reporting flows under study.
+  enabled: true
+  start_s: 0.0
+  stop_s: 60.0
+  udp_port: 4000
+  payload_B: 1136
+  iat:
+    model: fixed
+    period_s: 0.1
+
+alert:
+  # ALERT remains a compact anomaly/precursor report. The lognormal IAT has
+  # mean 0.1 s and CV 0.5, giving realistic report-update variability while
+  # preserving the deterministic model's mean offered load.
+  enabled: true
+  start_s: 15.0
+  stop_s: 35.0
+  udp_port: 4001
+  payload_B: 350
+  iat:
+    model: lognormal
+    # mean = 0.1 s, CV = 0.5:
+    # sigma = sqrt(log(1 + CV^2)) = 0.47238072707743883
+    # mu = log(mean) - sigma^2 / 2 = -2.4141568686511503
+    mu: -2.4141568686511503
+    sigma: 0.47238072707743883
+    min_iat_s: 0.001
+
+fault:
+  # FAULT remains the heavier detailed reporting stream. The lognormal IAT has
+  # mean 0.01 s and CV 0.25, adding jitter while keeping the same mean rate as
+  # the deterministic 100 Hz detailed-reporting proxy.
+  enabled: true
+  # The manuscript's declared contract defines the FAULT window as 20--50 s.
+  start_s: 20.0
+  stop_s: 50.0
+  udp_port: 4002
+  payload_B: 1056
+  packets_per_full_refresh: 2
+  iat:
+    model: lognormal
+    # mean = 0.01 s, CV = 0.25:
+    # sigma = sqrt(log(1 + CV^2)) = 0.24622067706923975
+    # mu = log(mean) - sigma^2 / 2 = -4.635482511091364
+    mu: -4.635482511091364
+    sigma: 0.24622067706923975
+    min_iat_s: 0.0005

@@ -1,0 +1,235 @@
+ev_background_load_mbps,traffic_class,n_pairs,metric,baseline_mean,qos_aware_mean,paired_effect_mean,paired_effect_ci_low,paired_effect_ci_high,paired_effect_sd,effect_definition
+0.0,ALERT_TOTAL,50,pdr_gain,0.99980676,0.9997101399999999,-9.662000000000059e-05,-0.0002898600000000018,0.0,0.0006832065719824464,QoS-aware PDR - baseline PDR
+0.0,ALERT_TOTAL,50,deadline_violation_reduction,0.00057971,0.0198308318,-0.0192511218,-0.026839214,-0.012914737,0.025311623929906414,baseline deadline-violation rate - QoS-aware deadline-violation rate
+0.0,ALERT_TOTAL,50,deadline_penalized_delay_reduction_ms,7.537885,13.126178,-5.588293,-6.3250074000000005,-4.985859,2.4478001142977592,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+0.0,DIAG_TOTAL,50,pdr_gain,0.99993334,0.99983334,-0.00010000000000000009,-0.00030000000000000024,0.0,0.0007071067811865481,QoS-aware PDR - baseline PDR
+0.0,DIAG_TOTAL,50,deadline_violation_reduction,6.666659999999999e-05,0.0001666666,-0.0001,-0.0003,0.0,0.0007071067811865475,baseline deadline-violation rate - QoS-aware deadline-violation rate
+0.0,DIAG_TOTAL,50,deadline_penalized_delay_reduction_ms,7.9546106,10.1488102,-2.1941996,-2.3605326,-2.0038014,0.6365110346445901,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+0.0,FAULT_TOTAL,50,pdr_gain,0.9998267799999999,0.99967356,-0.00015321999999999835,-0.0004596599999999951,0.0,0.0010834290101340166,QoS-aware PDR - baseline PDR
+0.0,FAULT_TOTAL,50,deadline_violation_reduction,0.0305727284,0.13722019400000002,-0.10664746559999999,-0.1127318626,-0.1010162758,0.02131474495453564,baseline deadline-violation rate - QoS-aware deadline-violation rate
+0.0,FAULT_TOTAL,50,deadline_penalized_delay_reduction_ms,8.3167916,8.850645,-0.5338533999999999,-0.6649475999999995,-0.4546142,0.416725328433,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+5.0,ALERT_TOTAL,50,pdr_gain,0.9970666,0.99689246,-0.0001741399999999982,-0.0029664999999999965,0.0018739000000000039,0.008830777264909865,QoS-aware PDR - baseline PDR
+5.0,ALERT_TOTAL,50,deadline_violation_reduction,0.05710834,0.005637776,0.051470563999999996,0.009753692,0.104976264,0.178979951835509,baseline deadline-violation rate - QoS-aware deadline-violation rate
+5.0,ALERT_TOTAL,50,deadline_penalized_delay_reduction_ms,14.363265000000002,4.6147366,9.7485284,1.9872107999999997,20.535314600000007,34.42120920397613,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+5.0,DIAG_TOTAL,50,pdr_gain,0.9948999999999999,0.99366668,-0.00123332,-0.0028666199999999977,-0.00010000000000000009,0.005082120365134445,QoS-aware PDR - baseline PDR
+5.0,DIAG_TOTAL,50,deadline_violation_reduction,0.014199999999999999,0.018633332,-0.004433332000000001,-0.011699976,-0.000233332,0.02347766880895624,baseline deadline-violation rate - QoS-aware deadline-violation rate
+5.0,DIAG_TOTAL,50,deadline_penalized_delay_reduction_ms,18.2579426,74.662356,-56.4044134,-168.57822780000004,-0.09042140000000005,395.77471074902417,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+5.0,FAULT_TOTAL,50,pdr_gain,0.99524258,0.9955985599999999,0.000355979999999998,-0.0006129200000000034,0.0016279199999999982,0.004266105701542651,QoS-aware PDR - baseline PDR
+5.0,FAULT_TOTAL,50,deadline_violation_reduction,0.0822241552,0.043448008600000004,0.0387761466,0.0022904791999999994,0.09060957359999999,0.1623544234702148,baseline deadline-violation rate - QoS-aware deadline-violation rate
+5.0,FAULT_TOTAL,50,deadline_penalized_delay_reduction_ms,22.2299118,7.7248734,14.5050384,1.2932990000000004,38.495838,78.24494395592293,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+10.0,ALERT_TOTAL,50,pdr_gain,0.99099298,0.99685852,0.005865539999999998,0.00019802000000000098,0.01593128,0.03275787339924899,QoS-aware PDR - baseline PDR
+10.0,ALERT_TOTAL,50,deadline_violation_reduction,0.0795131,0.006381476,0.073131624,0.01683168,0.148485476,0.2510651590282463,baseline deadline-violation rate - QoS-aware deadline-violation rate
+10.0,ALERT_TOTAL,50,deadline_penalized_delay_reduction_ms,122.79840700000001,4.4887014,118.3097056,3.6258542,342.90405679999986,776.9844836456997,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+10.0,DIAG_TOTAL,50,pdr_gain,0.97886666,0.97843334,-0.0004333200000000004,-0.0017999600000000004,0.0006666799999999995,0.00448994219970978,QoS-aware PDR - baseline PDR
+10.0,DIAG_TOTAL,50,deadline_violation_reduction,0.02313332,0.023033319999999996,9.999999999999982e-05,-0.0005333340000000005,0.0007666680000000001,0.0022439159365279454,baseline deadline-violation rate - QoS-aware deadline-violation rate
+10.0,DIAG_TOTAL,50,deadline_penalized_delay_reduction_ms,36.0754064,34.247400199999994,1.8280062000000024,-0.8443706000000003,6.699750800000008,16.532281382487998,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+10.0,FAULT_TOTAL,50,pdr_gain,0.98172938,0.9961494999999999,0.014420120000000002,0.0002731400000000006,0.04131638000000001,0.08724287240277767,QoS-aware PDR - baseline PDR
+10.0,FAULT_TOTAL,50,deadline_violation_reduction,0.09027737220000001,0.04723265734,0.04304471486,0.0064864818,0.09469977804000002,0.16777239487746556,baseline deadline-violation rate - QoS-aware deadline-violation rate
+10.0,FAULT_TOTAL,50,deadline_penalized_delay_reduction_ms,67.7185518,7.084882,60.6336698,2.4928626000000005,173.26809,388.16868866938535,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+15.0,ALERT_TOTAL,50,pdr_gain,0.99278942,0.9989128599999999,0.00612344,-0.00039700000000000293,0.018766360000000003,0.043352135257612015,QoS-aware PDR - baseline PDR
+15.0,ALERT_TOTAL,50,deadline_violation_reduction,0.0567449184,0.002372336,0.0543725824,9.66184e-05,0.12323768680000001,0.2178112185632988,baseline deadline-violation rate - QoS-aware deadline-violation rate
+15.0,ALERT_TOTAL,50,deadline_penalized_delay_reduction_ms,108.43550220000002,3.5702256,104.8652766,1.6316591999999996,306.1420736,700.533976508987,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+15.0,DIAG_TOTAL,50,pdr_gain,0.9797,0.9791666600000001,-0.0005333399999999988,-0.002000019999999997,0.00040000000000000034,0.004421634814529713,QoS-aware PDR - baseline PDR
+15.0,DIAG_TOTAL,50,deadline_violation_reduction,0.020933346,0.02933334,-0.008399994000000001,-0.025433327999999998,0.0002333459999999992,0.0594093768483387,baseline deadline-violation rate - QoS-aware deadline-violation rate
+15.0,DIAG_TOTAL,50,deadline_penalized_delay_reduction_ms,28.2403354,30.8216624,-2.5813270000000004,-16.0810526,8.419173,43.060131824199395,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+15.0,FAULT_TOTAL,50,pdr_gain,0.9837233000000001,0.99899068,0.015267379999999999,0.0,0.04482528,0.10104736093149587,QoS-aware PDR - baseline PDR
+15.0,FAULT_TOTAL,50,deadline_violation_reduction,0.063880936,0.015953513500000002,0.0479274225,0.0007285140000000001,0.10796071539999998,0.19235479058728044,baseline deadline-violation rate - QoS-aware deadline-violation rate
+15.0,FAULT_TOTAL,50,deadline_penalized_delay_reduction_ms,50.28664,4.624124,45.662516,1.3499033999999996,129.0743228,287.8550384835468,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+20.0,ALERT_TOTAL,50,pdr_gain,0.9921331600000001,1.0,0.00786684,0.0,0.021861379999999996,0.0441136572389355,QoS-aware PDR - baseline PDR
+20.0,ALERT_TOTAL,50,deadline_violation_reduction,0.041089108000000006,0.0,0.041089108000000006,0.0,0.101089108,0.19787388535544742,baseline deadline-violation rate - QoS-aware deadline-violation rate
+20.0,ALERT_TOTAL,50,deadline_penalized_delay_reduction_ms,150.1536448,3.0332368,147.120408,1.8012700000000001,392.0444152,768.9481635676505,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+20.0,DIAG_TOTAL,50,pdr_gain,0.96693334,0.9657666659999999,-0.0011666739999999997,-0.0028333619999999994,0.0,0.005326688527107663,QoS-aware PDR - baseline PDR
+20.0,DIAG_TOTAL,50,deadline_violation_reduction,0.0364000066,0.048499999999999995,-0.0120999934,-0.0362999802,0.0,0.0855598738545247,baseline deadline-violation rate - QoS-aware deadline-violation rate
+20.0,DIAG_TOTAL,50,deadline_penalized_delay_reduction_ms,34.0399686,48.8985048,-14.858536199999998,-52.357288399999995,8.081750800000007,120.77543524511579,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+20.0,FAULT_TOTAL,50,pdr_gain,0.97948982,1.0,0.02051018,0.0,0.056433939999999995,0.11409368472027087,QoS-aware PDR - baseline PDR
+20.0,FAULT_TOTAL,50,deadline_violation_reduction,0.0568030043,0.00131288262,0.05549012168,0.0007111496000000002,0.12070435884000003,0.2210749126061404,baseline deadline-violation rate - QoS-aware deadline-violation rate
+20.0,FAULT_TOTAL,50,deadline_penalized_delay_reduction_ms,74.8556238,3.3343718,71.52125199999999,1.7453962,178.1129004,345.29790648488273,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+22.0,ALERT_TOTAL,50,pdr_gain,0.9914515,1.0,0.008548499999999999,0.0,0.023317099999999997,0.0458029106419615,QoS-aware PDR - baseline PDR
+22.0,ALERT_TOTAL,50,deadline_violation_reduction,0.11104654,0.0,0.11104654,0.03879008,0.19589406,0.2861617132872215,baseline deadline-violation rate - QoS-aware deadline-violation rate
+22.0,ALERT_TOTAL,50,deadline_penalized_delay_reduction_ms,186.9579534,2.9396265999999995,184.01832679999998,13.1998974,432.7139078,780.3756427650953,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+22.0,DIAG_TOTAL,50,pdr_gain,0.95656666,0.947133326,-0.009433333999999998,-0.017500021999999994,-0.002766693999999999,0.02678250301790948,QoS-aware PDR - baseline PDR
+22.0,DIAG_TOTAL,50,deadline_violation_reduction,0.0873,0.10289998,-0.015599979999999998,-0.031166660000000002,-0.003866639999999999,0.053318176222116355,baseline deadline-violation rate - QoS-aware deadline-violation rate
+22.0,DIAG_TOTAL,50,deadline_penalized_delay_reduction_ms,65.01662400000001,105.7658108,-40.749186800000004,-90.2242982,-0.8758637999999986,162.72498875462216,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+22.0,FAULT_TOTAL,50,pdr_gain,0.9765191799999999,1.0,0.02348082,0.0,0.06055176,0.11726633492543583,QoS-aware PDR - baseline PDR
+22.0,FAULT_TOTAL,50,deadline_violation_reduction,0.14000097368,0.0002331852,0.13976778848000002,0.059940398420000006,0.23942922696,0.348863694763781,baseline deadline-violation rate - QoS-aware deadline-violation rate
+22.0,FAULT_TOTAL,50,deadline_penalized_delay_reduction_ms,128.5200008,3.1745929999999998,125.34540779999999,25.904186000000003,247.22979919999997,400.31572485692163,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+23.0,ALERT_TOTAL,50,pdr_gain,0.99000946,1.0,0.009990540000000001,0.0,0.027445200000000006,0.05430628935170796,QoS-aware PDR - baseline PDR
+23.0,ALERT_TOTAL,50,deadline_violation_reduction,0.14,0.0,0.14,0.06,0.24,0.3505098327538656,baseline deadline-violation rate - QoS-aware deadline-violation rate
+23.0,ALERT_TOTAL,50,deadline_penalized_delay_reduction_ms,246.6709978,2.9355472,243.7354506,71.58020119999999,477.07510720000005,765.4863344828331,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+23.0,DIAG_TOTAL,50,pdr_gain,0.93236666,0.920333346,-0.012033314000000002,-0.023266654,-0.00293334,0.037726259143931906,QoS-aware PDR - baseline PDR
+23.0,DIAG_TOTAL,50,deadline_violation_reduction,0.11326665999999999,0.11310002000000001,0.00016664000000000013,-3.338000000000063e-05,0.0004999400000000009,0.0010240022074274723,baseline deadline-violation rate - QoS-aware deadline-violation rate
+23.0,DIAG_TOTAL,50,deadline_penalized_delay_reduction_ms,101.3618646,92.4703112,8.891553399999998,0.40098120000000054,22.32640519999999,41.24603917501356,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+23.0,FAULT_TOTAL,50,pdr_gain,0.9730471,1.0,0.0269529,0.0020766400000000007,0.0662279,0.1191855005506979,QoS-aware PDR - baseline PDR
+23.0,FAULT_TOTAL,50,deadline_violation_reduction,0.15747074590000001,9.994874000000001e-05,0.15737079716,0.0599930714,0.25998667724,0.3646800928110207,baseline deadline-violation rate - QoS-aware deadline-violation rate
+23.0,FAULT_TOTAL,50,deadline_penalized_delay_reduction_ms,211.33366020000003,3.1142932,208.21936699999998,82.78096120000002,359.14951980000006,518.8988038923786,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+24.0,ALERT_TOTAL,50,pdr_gain,0.9883163,1.0,0.011683700000000003,0.0013650800000000029,0.028454140000000003,0.05238264567943806,QoS-aware PDR - baseline PDR
+24.0,ALERT_TOTAL,50,deadline_violation_reduction,0.16,0.0,0.16,0.06,0.28,0.3703280399090206,baseline deadline-violation rate - QoS-aware deadline-violation rate
+24.0,ALERT_TOTAL,50,deadline_penalized_delay_reduction_ms,313.8203762,2.932987,310.8873892,105.5546144,575.0043404,848.3399711770276,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+24.0,DIAG_TOTAL,50,pdr_gain,0.9161333460000001,0.91616668,3.3333999999999034e-05,-0.0021333380000000033,0.0024666479999999966,0.008285466606042218,QoS-aware PDR - baseline PDR
+24.0,DIAG_TOTAL,50,deadline_violation_reduction,0.135,0.13506668,-6.668000000000118e-05,-0.0008667199999999986,0.0005999999999999939,0.00260730667540123,baseline deadline-violation rate - QoS-aware deadline-violation rate
+24.0,DIAG_TOTAL,50,deadline_penalized_delay_reduction_ms,117.57080680000001,120.57599420000001,-3.0051873999999983,-12.586539199999999,8.0815324,37.76571751026389,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+24.0,FAULT_TOTAL,50,pdr_gain,0.9663056600000001,1.0,0.03369434,0.00792866,0.0714901,0.11947057388850775,QoS-aware PDR - baseline PDR
+24.0,FAULT_TOTAL,50,deadline_violation_reduction,0.16,8.670642e-05,0.15991329358,0.059920102759999996,0.25993997872,0.3703477648247214,baseline deadline-violation rate - QoS-aware deadline-violation rate
+24.0,FAULT_TOTAL,50,deadline_penalized_delay_reduction_ms,248.53083320000002,3.0801314000000004,245.4507018,98.24705239999999,411.4297843999999,575.6832173450013,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+24.5,ALERT_TOTAL,50,pdr_gain,0.98782788,1.0,0.012172119999999998,0.0019230599999999986,0.028931179999999994,0.05132674621168951,QoS-aware PDR - baseline PDR
+24.5,ALERT_TOTAL,50,deadline_violation_reduction,0.16,0.0,0.16,0.06,0.26,0.3703280399090206,baseline deadline-violation rate - QoS-aware deadline-violation rate
+24.5,ALERT_TOTAL,50,deadline_penalized_delay_reduction_ms,335.448115,2.9324527999999996,332.5156622,115.38826699999998,595.4176778,873.8534953206255,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+24.5,DIAG_TOTAL,50,pdr_gain,0.898666666,0.897099994,-0.0015666719999999973,-0.003800023999999994,0.0002666800000000008,0.0074567442706569625,QoS-aware PDR - baseline PDR
+24.5,DIAG_TOTAL,50,deadline_violation_reduction,0.13973333999999998,0.13976668,-3.333999999999948e-05,-0.0004000199999999987,0.00030000000000000024,0.0011900378249862288,baseline deadline-violation rate - QoS-aware deadline-violation rate
+24.5,DIAG_TOTAL,50,deadline_penalized_delay_reduction_ms,107.81548199999999,107.3949468,0.4205351999999985,-6.741048800000001,10.809822999999996,33.33237649502144,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+24.5,FAULT_TOTAL,50,pdr_gain,0.95993474,1.0,0.04006526,0.01125312,0.07968726,0.1274409807564094,QoS-aware PDR - baseline PDR
+24.5,FAULT_TOTAL,50,deadline_violation_reduction,0.20957076,6.0086139999999997e-05,0.20951067386,0.10500269934,0.3252210413,0.4006546122163791,baseline deadline-violation rate - QoS-aware deadline-violation rate
+24.5,FAULT_TOTAL,50,deadline_penalized_delay_reduction_ms,249.0574184,3.0656617999999995,245.9917566,95.48464179999999,406.54715039999996,564.0885384614237,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+25.0,ALERT_TOTAL,50,pdr_gain,0.9874331,1.0,0.012566899999999997,0.0024059399999999975,0.028838239999999998,0.051452494004029514,QoS-aware PDR - baseline PDR
+25.0,ALERT_TOTAL,50,deadline_violation_reduction,0.19841038,0.0,0.19841038,0.09352942,0.30988096,0.38500263703199145,baseline deadline-violation rate - QoS-aware deadline-violation rate
+25.0,ALERT_TOTAL,50,deadline_penalized_delay_reduction_ms,353.59470739999995,2.9342106,350.6604968,132.8222848,622.856505,882.3940175893298,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+25.0,DIAG_TOTAL,50,pdr_gain,0.8901000139999999,0.889033314,-0.0010667000000000012,-0.0031667000000000006,0.0005666199999999999,0.007028934047701599,QoS-aware PDR - baseline PDR
+25.0,DIAG_TOTAL,50,deadline_violation_reduction,0.16746668,0.17093332,-0.0034666399999999996,-0.007933319999999999,3.335999999999784e-05,0.014189552799269792,baseline deadline-violation rate - QoS-aware deadline-violation rate
+25.0,DIAG_TOTAL,50,deadline_penalized_delay_reduction_ms,117.2803168,119.1619868,-1.881669999999998,-9.281234399999995,7.368739800000002,30.497985790105176,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+25.0,FAULT_TOTAL,50,pdr_gain,0.95670276,1.0,0.043297239999999994,0.01312658,0.08425629999999998,0.13137420276626546,QoS-aware PDR - baseline PDR
+25.0,FAULT_TOTAL,50,deadline_violation_reduction,0.21952712,6.002540000000001e-05,0.21946709460000002,0.11943343476000001,0.33927390964,0.4175716372952688,baseline deadline-violation rate - QoS-aware deadline-violation rate
+25.0,FAULT_TOTAL,50,deadline_penalized_delay_reduction_ms,264.278851,3.0578106000000003,261.2210404,121.0071362,423.84165800000005,554.1973435036327,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+25.5,ALERT_TOTAL,50,pdr_gain,0.98487476,1.0,0.01512524,0.003560860000000001,0.03249808,0.055390025003977245,QoS-aware PDR - baseline PDR
+25.5,ALERT_TOTAL,50,deadline_violation_reduction,0.22,0.0,0.22,0.12,0.34,0.4184519575964803,baseline deadline-violation rate - QoS-aware deadline-violation rate
+25.5,ALERT_TOTAL,50,deadline_penalized_delay_reduction_ms,365.97802,2.9336974,363.0443226,150.152598,626.0445038000001,868.555049699955,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+25.5,DIAG_TOTAL,50,pdr_gain,0.8795333399999999,0.8797333260000001,0.0001999860000000006,-0.002133342,0.0023666400000000015,0.00819710232161491,QoS-aware PDR - baseline PDR
+25.5,DIAG_TOTAL,50,deadline_violation_reduction,0.17826664,0.17946666,-0.0012000200000000017,-0.002433360000000004,-0.00016669999999999963,0.004232963295954503,baseline deadline-violation rate - QoS-aware deadline-violation rate
+25.5,DIAG_TOTAL,50,deadline_penalized_delay_reduction_ms,130.408369,136.3101222,-5.901753200000001,-15.9146934,6.552555799999997,41.311110708058905,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+25.5,FAULT_TOTAL,50,pdr_gain,0.95393586,1.0,0.04606414,0.0153934,0.08772234,0.13285075853984668,QoS-aware PDR - baseline PDR
+25.5,FAULT_TOTAL,50,deadline_violation_reduction,0.22,1.3375700000000001e-05,0.2199866243,0.11996653726,0.33999330432,0.4184591385238382,baseline deadline-violation rate - QoS-aware deadline-violation rate
+25.5,FAULT_TOTAL,50,deadline_penalized_delay_reduction_ms,287.9865248,3.0545886,284.9319362,137.0543546,448.52026720000003,562.3131999956489,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+26.0,ALERT_TOTAL,50,pdr_gain,0.98266774,1.0,0.017332260000000002,0.0041421600000000015,0.0378835,0.0628717847777133,QoS-aware PDR - baseline PDR
+26.0,ALERT_TOTAL,50,deadline_violation_reduction,0.26907962,0.0,0.26907962,0.15679536,0.38851608,0.42584016320684964,baseline deadline-violation rate - QoS-aware deadline-violation rate
+26.0,ALERT_TOTAL,50,deadline_penalized_delay_reduction_ms,395.5119584,2.9509954,392.56096299999996,185.7144236,640.3284768000001,837.7837994843359,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+26.0,DIAG_TOTAL,50,pdr_gain,0.8547333260000001,0.855166626,0.0004332999999999973,-0.002200080000000002,0.002999939999999997,0.00942691580106708,QoS-aware PDR - baseline PDR
+26.0,DIAG_TOTAL,50,deadline_violation_reduction,0.21703336,0.2248667,-0.007833340000000001,-0.016199980000000003,-0.0015333200000000014,0.028103785342838195,baseline deadline-violation rate - QoS-aware deadline-violation rate
+26.0,DIAG_TOTAL,50,deadline_penalized_delay_reduction_ms,138.2127022,146.30523300000002,-8.092530799999999,-17.958171800000002,3.561805200000005,39.10660405349328,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+26.0,FAULT_TOTAL,50,pdr_gain,0.95025084,1.0,0.049749159999999994,0.017506900000000002,0.09125602,0.1360549105136299,QoS-aware PDR - baseline PDR
+26.0,FAULT_TOTAL,50,deadline_violation_reduction,0.29927314,1.9989199999999998e-05,0.29925315080000003,0.17937936389999998,0.43848691517999994,0.46180717897172374,baseline deadline-violation rate - QoS-aware deadline-violation rate
+26.0,FAULT_TOTAL,50,deadline_penalized_delay_reduction_ms,332.7956646,3.0517072,329.7439574,180.7074026,494.29934239999994,581.7309360136012,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+26.5,ALERT_TOTAL,50,pdr_gain,0.98257798,1.0,0.01742202,0.00543358,0.03455436,0.05517732780900548,QoS-aware PDR - baseline PDR
+26.5,ALERT_TOTAL,50,deadline_violation_reduction,0.28691822,0.0,0.28691822,0.17024876,0.41356718000000003,0.4445295528521705,baseline deadline-violation rate - QoS-aware deadline-violation rate
+26.5,ALERT_TOTAL,50,deadline_penalized_delay_reduction_ms,439.8291218,2.9475510000000003,436.88157079999996,215.96188019999997,703.5120284,891.5881830215544,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+26.5,DIAG_TOTAL,50,pdr_gain,0.84366668,0.8434999860000001,-0.00016669400000000222,-0.002800016000000001,0.0022666199999999913,0.008903887264363457,QoS-aware PDR - baseline PDR
+26.5,DIAG_TOTAL,50,deadline_violation_reduction,0.23706664,0.2395,-0.00243336,-0.004866740000000003,-0.0004666799999999971,0.008089785503980198,baseline deadline-violation rate - QoS-aware deadline-violation rate
+26.5,DIAG_TOTAL,50,deadline_penalized_delay_reduction_ms,161.547238,173.56002,-12.012782,-22.868560799999997,1.9748952000000017,45.07156596346856,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+26.5,FAULT_TOTAL,50,pdr_gain,0.9458233199999999,1.0,0.05417668,0.021394120000000003,0.09696904,0.138929164901331,QoS-aware PDR - baseline PDR
+26.5,FAULT_TOTAL,50,deadline_violation_reduction,0.3,6.68002e-06,0.29999331998,0.17998663995999997,0.43998663996,0.4629144697727766,baseline deadline-violation rate - QoS-aware deadline-violation rate
+26.5,FAULT_TOTAL,50,deadline_penalized_delay_reduction_ms,365.39218800000003,3.0515186,362.34066939999997,204.17550619999997,532.1386232,593.4269472872663,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+27.0,ALERT_TOTAL,50,pdr_gain,0.9795668000000001,1.0,0.020433200000000006,0.006908520000000002,0.03989742,0.061533020149297714,QoS-aware PDR - baseline PDR
+27.0,ALERT_TOTAL,50,deadline_violation_reduction,0.6922234,0.0,0.6922234,0.6370823400000001,0.7518149799999999,0.20412752281435873,baseline deadline-violation rate - QoS-aware deadline-violation rate
+27.0,ALERT_TOTAL,50,deadline_penalized_delay_reduction_ms,527.6299300000001,2.9393244,524.6906056,313.7732852,779.1750848,849.6259894760143,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+27.0,DIAG_TOTAL,50,pdr_gain,0.8068667,0.8044666460000001,-0.002400053999999996,-0.006033453999999994,0.000833360000000003,0.012644518713046195,QoS-aware PDR - baseline PDR
+27.0,DIAG_TOTAL,50,deadline_violation_reduction,0.322000018,0.55256662,-0.230566602,-0.270466622,-0.18626662800000002,0.1527115366586624,baseline deadline-violation rate - QoS-aware deadline-violation rate
+27.0,DIAG_TOTAL,50,deadline_penalized_delay_reduction_ms,243.84326000000001,311.98842,-68.14515999999999,-81.18189999999998,-53.32065999999999,51.20092595278778,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+27.0,FAULT_TOTAL,50,pdr_gain,0.9398004799999999,1.0,0.06019952,0.026507180000000005,0.10281826000000001,0.14002549846589385,QoS-aware PDR - baseline PDR
+27.0,FAULT_TOTAL,50,deadline_violation_reduction,0.99073644,0.0,0.99073644,0.9890947000000001,0.9924804000000002,0.006207564201251001,baseline deadline-violation rate - QoS-aware deadline-violation rate
+27.0,FAULT_TOTAL,50,deadline_penalized_delay_reduction_ms,529.36842,3.0526752,526.3157448000001,380.1800806,679.5216122,547.2822020398148,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+27.5,ALERT_TOTAL,50,pdr_gain,0.9770711799999999,1.0,0.022928820000000003,0.009443920000000003,0.041964839999999996,0.060829744136414315,QoS-aware PDR - baseline PDR
+27.5,ALERT_TOTAL,50,deadline_violation_reduction,0.7722724599999999,0.0,0.7722724599999999,0.7320663200000002,0.8133124800000001,0.15147017067466667,baseline deadline-violation rate - QoS-aware deadline-violation rate
+27.5,ALERT_TOTAL,50,deadline_penalized_delay_reduction_ms,636.50056,2.941995,633.558565,422.9858738,870.4035652,831.3933608103554,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+27.5,DIAG_TOTAL,50,pdr_gain,0.78919998,0.787700006,-0.0014999740000000024,-0.003966654000000005,0.0007333000000000012,0.00854661237203851,QoS-aware PDR - baseline PDR
+27.5,DIAG_TOTAL,50,deadline_violation_reduction,0.61156674,0.64293334,-0.0313666,-0.03683324,-0.025333219999999997,0.020956935762926523,baseline deadline-violation rate - QoS-aware deadline-violation rate
+27.5,DIAG_TOTAL,50,deadline_penalized_delay_reduction_ms,411.62742,486.2749,-74.64748,-89.93804,-58.05215999999999,57.9611201513003,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+27.5,FAULT_TOTAL,50,pdr_gain,0.93228084,1.0,0.06771916,0.032451600000000004,0.11182457999999999,0.14423913292499185,QoS-aware PDR - baseline PDR
+27.5,FAULT_TOTAL,50,deadline_violation_reduction,0.9966806800000001,1.340496e-05,0.99666727504,0.9960589999400001,0.9972823350600001,0.002225808646682395,baseline deadline-violation rate - QoS-aware deadline-violation rate
+27.5,FAULT_TOTAL,50,deadline_penalized_delay_reduction_ms,726.96742,3.0514051999999996,723.9160148,611.9824542,839.6457669999999,428.057553334099,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+28.0,ALERT_TOTAL,50,pdr_gain,0.9742202,1.0,0.025779800000000002,0.011645099999999997,0.04490406,0.0617870941626261,QoS-aware PDR - baseline PDR
+28.0,ALERT_TOTAL,50,deadline_violation_reduction,1.0,0.0,1.0,1.0,1.0,0.0,baseline deadline-violation rate - QoS-aware deadline-violation rate
+28.0,ALERT_TOTAL,50,deadline_penalized_delay_reduction_ms,949.3315200000001,2.934047,946.397473,780.3701948,1147.6002841999998,674.8003439711852,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+28.0,DIAG_TOTAL,50,pdr_gain,0.65763334,0.614999946,-0.042633393999999984,-0.050700099999999984,-0.03416668799999999,0.030587783946098943,QoS-aware PDR - baseline PDR
+28.0,DIAG_TOTAL,50,deadline_violation_reduction,0.72609994,0.73029994,-0.0042000000000000015,-0.005366780000000013,-0.0029999600000000016,0.004444709476054715,baseline deadline-violation rate - QoS-aware deadline-violation rate
+28.0,DIAG_TOTAL,50,deadline_penalized_delay_reduction_ms,579.72004,563.94676,15.77328,7.607260000000001,26.237560000000002,34.20140729592922,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+28.0,FAULT_TOTAL,50,pdr_gain,0.9193683199999999,1.0,0.08063168,0.045412399999999985,0.12442318000000001,0.14344861863590241,QoS-aware PDR - baseline PDR
+28.0,FAULT_TOTAL,50,deadline_violation_reduction,1.0,6.72494e-06,0.99999327506,0.9999798251800001,1.0,4.7552506770728274e-05,baseline deadline-violation rate - QoS-aware deadline-violation rate
+28.0,FAULT_TOTAL,50,deadline_penalized_delay_reduction_ms,1118.6684,3.053068,1115.615332,1071.043474,1162.0504178,166.60393809761422,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+28.5,ALERT_TOTAL,50,pdr_gain,0.9729935399999999,1.0,0.02700646,0.013772779999999998,0.045183520000000005,0.05802159910747172,QoS-aware PDR - baseline PDR
+28.5,ALERT_TOTAL,50,deadline_violation_reduction,1.0,0.0,1.0,1.0,1.0,0.0,baseline deadline-violation rate - QoS-aware deadline-violation rate
+28.5,ALERT_TOTAL,50,deadline_penalized_delay_reduction_ms,1264.5422,2.9407818,1261.6014182000001,1135.5996724000001,1437.6913398,553.2442658178225,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+28.5,DIAG_TOTAL,50,pdr_gain,0.50893332,0.48549993399999997,-0.023433386000000018,-0.03010002400000002,-0.016433306000000016,0.02487247362102483,QoS-aware PDR - baseline PDR
+28.5,DIAG_TOTAL,50,deadline_violation_reduction,0.8266667200000001,0.82663338,3.334000000000392e-05,-0.000766699999999998,0.0008667000000000091,0.003002089161071079,baseline deadline-violation rate - QoS-aware deadline-violation rate
+28.5,DIAG_TOTAL,50,deadline_penalized_delay_reduction_ms,557.57214,545.74668,11.825460000000003,3.4715400000000067,20.1753,29.892452294380885,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+28.5,FAULT_TOTAL,50,pdr_gain,0.8884108000000001,1.0,0.1115892,0.07862018000000001,0.15134702,0.13269181050333537,QoS-aware PDR - baseline PDR
+28.5,FAULT_TOTAL,50,deadline_violation_reduction,1.0,1.340496e-05,0.99998659504,0.9999664651400001,1.0,6.63377359565099e-05,baseline deadline-violation rate - QoS-aware deadline-violation rate
+28.5,FAULT_TOTAL,50,deadline_penalized_delay_reduction_ms,1286.6254,3.0516305999999997,1283.5737694,1270.018479,1300.429095,56.82133988295994,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+29.0,ALERT_TOTAL,50,pdr_gain,0.96248566,1.0,0.03751434000000001,0.024409040000000007,0.05461474000000001,0.05597833880832106,QoS-aware PDR - baseline PDR
+29.0,ALERT_TOTAL,50,deadline_violation_reduction,1.0,0.0,1.0,1.0,1.0,0.0,baseline deadline-violation rate - QoS-aware deadline-violation rate
+29.0,ALERT_TOTAL,50,deadline_penalized_delay_reduction_ms,1433.5191999999997,2.9451168,1430.5740832,1330.9520154000002,1590.3093072000001,494.27996297452177,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+29.0,DIAG_TOTAL,50,pdr_gain,0.411600034,0.39553329400000004,-0.016066740000000003,-0.021000060000000004,-0.011133379999999997,0.017981313030999032,QoS-aware PDR - baseline PDR
+29.0,DIAG_TOTAL,50,deadline_violation_reduction,0.8566334600000001,0.85643344,0.00020001999999999854,-0.0004666400000000026,0.0008334000000000108,0.002372382884488142,baseline deadline-violation rate - QoS-aware deadline-violation rate
+29.0,DIAG_TOTAL,50,deadline_penalized_delay_reduction_ms,533.25578,520.35996,12.895819999999999,5.166359999999995,22.119559999999996,31.134678878133474,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+29.0,FAULT_TOTAL,50,pdr_gain,0.8575630200000001,1.0,0.14243698,0.11286604,0.18085964000000002,0.12277995896683447,QoS-aware PDR - baseline PDR
+29.0,FAULT_TOTAL,50,deadline_violation_reduction,1.0,6.68002e-06,0.9999933199800001,0.9999799599400001,1.0,4.72348744046216e-05,baseline deadline-violation rate - QoS-aware deadline-violation rate
+29.0,FAULT_TOTAL,50,deadline_penalized_delay_reduction_ms,1322.6742000000002,3.0540748000000004,1319.6201251999998,1312.5765616,1329.0197701999998,30.199667714653994,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+29.5,ALERT_TOTAL,50,pdr_gain,0.9565804400000001,1.0,0.043419559999999996,0.03085124,0.05845224,0.05146870821293819,QoS-aware PDR - baseline PDR
+29.5,ALERT_TOTAL,50,deadline_violation_reduction,1.0,0.0,1.0,1.0,1.0,0.0,baseline deadline-violation rate - QoS-aware deadline-violation rate
+29.5,ALERT_TOTAL,50,deadline_penalized_delay_reduction_ms,1520.9607999999998,2.947396,1518.0134040000003,1422.7468926,1678.4026435999997,509.28485878722034,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+29.5,DIAG_TOTAL,50,pdr_gain,0.35429995400000003,0.348133374,-0.006166579999999996,-0.010633279999999997,-0.001933179999999993,0.016022396531602836,QoS-aware PDR - baseline PDR
+29.5,DIAG_TOTAL,50,deadline_violation_reduction,0.8723999600000001,0.8725,-0.0001000399999999968,-0.0011667799999999916,0.0009999200000000074,0.003961597533669392,baseline deadline-violation rate - QoS-aware deadline-violation rate
+29.5,DIAG_TOTAL,50,deadline_penalized_delay_reduction_ms,524.41764,519.38488,5.032759999999999,-3.359739999999996,16.276,35.339503145254746,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+29.5,FAULT_TOTAL,50,pdr_gain,0.83281154,1.0,0.16718845999999998,0.13994312,0.20232101999999996,0.11642875762442781,QoS-aware PDR - baseline PDR
+29.5,FAULT_TOTAL,50,deadline_violation_reduction,1.0,6.72494e-06,0.99999327506,0.9999798251800001,1.0,4.7552506770728274e-05,baseline deadline-violation rate - QoS-aware deadline-violation rate
+29.5,FAULT_TOTAL,50,deadline_penalized_delay_reduction_ms,1308.4646,3.0521548000000003,1305.4124452,1299.0518222,1312.9030896,25.194897401423372,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+30.0,ALERT_TOTAL,50,pdr_gain,0.94587012,1.0,0.05412988000000001,0.040240040000000026,0.07496486000000001,0.06329783610275652,QoS-aware PDR - baseline PDR
+30.0,ALERT_TOTAL,50,deadline_violation_reduction,1.0,0.0,1.0,1.0,1.0,0.0,baseline deadline-violation rate - QoS-aware deadline-violation rate
+30.0,ALERT_TOTAL,50,deadline_penalized_delay_reduction_ms,1529.4289999999999,2.9417142000000003,1526.4872857999999,1451.8097582000003,1647.1823184000002,375.22386304270526,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+30.0,DIAG_TOTAL,50,pdr_gain,0.3145,0.305533334,-0.008966665999999995,-0.01433328599999999,-0.0038000599999999927,0.01945361244838823,QoS-aware PDR - baseline PDR
+30.0,DIAG_TOTAL,50,deadline_violation_reduction,0.8848665800000001,0.8847666200000001,9.99600000000056e-05,-0.000400059999999991,0.0005999999999999983,0.0018568642314066815,baseline deadline-violation rate - QoS-aware deadline-violation rate
+30.0,DIAG_TOTAL,50,deadline_penalized_delay_reduction_ms,518.6516399999999,505.84664,12.805000000000001,0.9742999999999961,30.42794,55.96085939078404,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+30.0,FAULT_TOTAL,50,pdr_gain,0.81072564,1.0,0.18927436,0.16295508000000003,0.22433160000000002,0.11235577433400691,QoS-aware PDR - baseline PDR
+30.0,FAULT_TOTAL,50,deadline_violation_reduction,1.0,2.012992e-05,0.99997987008,0.9999462902599998,1.0,0.00010532219847276527,baseline deadline-violation rate - QoS-aware deadline-violation rate
+30.0,FAULT_TOTAL,50,deadline_penalized_delay_reduction_ms,1274.4774,3.0508664,1271.4265335999999,1265.4556956000001,1278.4084008,23.101169063867705,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+31.0,ALERT_TOTAL,50,pdr_gain,0.93732502,1.0,0.06267498000000002,0.04928232000000001,0.080904,0.05901153529624526,QoS-aware PDR - baseline PDR
+31.0,ALERT_TOTAL,50,deadline_violation_reduction,1.0,0.0,1.0,1.0,1.0,0.0,baseline deadline-violation rate - QoS-aware deadline-violation rate
+31.0,ALERT_TOTAL,50,deadline_penalized_delay_reduction_ms,1523.8516,2.9426286,1520.9089714,1443.6979516000001,1654.9127084,405.8021287164869,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+31.0,DIAG_TOTAL,50,pdr_gain,0.23816676,0.24119990000000002,0.003033139999999997,-0.0009002200000000016,0.006833139999999998,0.014016056378617046,QoS-aware PDR - baseline PDR
+31.0,DIAG_TOTAL,50,deadline_violation_reduction,0.89453328,0.89489994,-0.0003666600000000031,-0.0012999600000000067,0.0005000399999999972,0.003338153740055266,baseline deadline-violation rate - QoS-aware deadline-violation rate
+31.0,DIAG_TOTAL,50,deadline_penalized_delay_reduction_ms,470.93195999999995,475.52891999999997,-4.596960000000003,-11.832239999999999,4.953299999999998,30.670265920448433,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+31.0,FAULT_TOTAL,50,pdr_gain,0.78825698,1.0,0.21174302,0.1868947,0.24445538,0.10510600814969075,QoS-aware PDR - baseline PDR
+31.0,FAULT_TOTAL,50,deadline_violation_reduction,1.0,1.340496e-05,0.99998659504,0.9999664651400001,1.0,6.63377359565099e-05,baseline deadline-violation rate - QoS-aware deadline-violation rate
+31.0,FAULT_TOTAL,50,deadline_penalized_delay_reduction_ms,1242.1696000000002,3.053566,1239.1160340000001,1229.9498217999999,1252.1323282,40.52847369125845,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+32.0,ALERT_TOTAL,50,pdr_gain,0.93577836,1.0,0.06422164,0.05284947999999999,0.07957312,0.04953702848633042,QoS-aware PDR - baseline PDR
+32.0,ALERT_TOTAL,50,deadline_violation_reduction,1.0,0.0,1.0,1.0,1.0,0.0,baseline deadline-violation rate - QoS-aware deadline-violation rate
+32.0,ALERT_TOTAL,50,deadline_penalized_delay_reduction_ms,1528.7822,2.9583656,1525.8238344000001,1438.1504388,1671.9252527999997,464.1251377075832,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+32.0,DIAG_TOTAL,50,pdr_gain,0.210000046,0.20653342,-0.003466626000000001,-0.007099906000000001,0.00010015399999999536,0.013421749615027609,QoS-aware PDR - baseline PDR
+32.0,DIAG_TOTAL,50,deadline_violation_reduction,0.89896668,0.89786678,0.0010999000000000091,0.00016660000000000562,0.0020999800000000035,0.0035252149869308227,baseline deadline-violation rate - QoS-aware deadline-violation rate
+32.0,DIAG_TOTAL,50,deadline_penalized_delay_reduction_ms,462.85096,460.31158000000005,2.5393799999999964,-3.87938,9.724379999999996,24.72611952017789,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+32.0,FAULT_TOTAL,50,pdr_gain,0.77242948,1.0,0.22757052000000003,0.2033256,0.25911428000000003,0.10199049512641972,QoS-aware PDR - baseline PDR
+32.0,FAULT_TOTAL,50,deadline_violation_reduction,1.0,6.68002e-06,0.9999933199800001,0.9999799599400001,1.0,4.72348744046216e-05,baseline deadline-violation rate - QoS-aware deadline-violation rate
+32.0,FAULT_TOTAL,50,deadline_penalized_delay_reduction_ms,1217.6512,3.0493704000000004,1214.6018296,1205.4878522000001,1227.231093,39.80037375455569,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+33.0,ALERT_TOTAL,50,pdr_gain,0.9266673799999999,1.0,0.07333262,0.061506620000000005,0.08953649999999999,0.05174690700404524,QoS-aware PDR - baseline PDR
+33.0,ALERT_TOTAL,50,deadline_violation_reduction,1.0,0.0,1.0,1.0,1.0,0.0,baseline deadline-violation rate - QoS-aware deadline-violation rate
+33.0,ALERT_TOTAL,50,deadline_penalized_delay_reduction_ms,1512.8157999999999,2.951463,1509.864337,1425.0792821999996,1651.0323247999997,446.90063568581155,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+33.0,DIAG_TOTAL,50,pdr_gain,0.161766606,0.161866666,0.00010006000000000084,-0.003399947999999998,0.0035334539999999992,0.01253300691187319,QoS-aware PDR - baseline PDR
+33.0,DIAG_TOTAL,50,deadline_violation_reduction,0.9004333200000001,0.9005333600000001,-0.00010003999999999902,-0.0005333600000000027,0.0003331800000000085,0.0015936712200297467,baseline deadline-violation rate - QoS-aware deadline-violation rate
+33.0,DIAG_TOTAL,50,deadline_penalized_delay_reduction_ms,422.35,423.51554000000004,-1.1655399999999998,-7.289680000000003,5.473220000000006,23.411623898388424,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+33.0,FAULT_TOTAL,50,pdr_gain,0.74330646,1.0,0.25669354,0.23405869999999995,0.28639454000000003,0.0977843259302902,QoS-aware PDR - baseline PDR
+33.0,FAULT_TOTAL,50,deadline_violation_reduction,1.0,1.340496e-05,0.99998659504,0.9999664651400001,1.0,6.63377359565099e-05,baseline deadline-violation rate - QoS-aware deadline-violation rate
+33.0,FAULT_TOTAL,50,deadline_penalized_delay_reduction_ms,1172.3584,3.0544626,1169.3039374,1160.3253264,1181.6210878,39.75943338678126,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+34.0,ALERT_TOTAL,50,pdr_gain,0.9106807600000001,1.0,0.08931923999999998,0.07676684,0.10597142000000001,0.05476185186063863,QoS-aware PDR - baseline PDR
+34.0,ALERT_TOTAL,50,deadline_violation_reduction,1.0,0.0,1.0,1.0,1.0,0.0,baseline deadline-violation rate - QoS-aware deadline-violation rate
+34.0,ALERT_TOTAL,50,deadline_penalized_delay_reduction_ms,1485.2695999999999,2.9461002,1482.3234998,1400.8271852,1615.839807,421.1475232193062,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+34.0,DIAG_TOTAL,50,pdr_gain,0.147433292,0.145666726,-0.0017665660000000015,-0.005533180000000002,0.0020335079999999972,0.01373715116923343,QoS-aware PDR - baseline PDR
+34.0,DIAG_TOTAL,50,deadline_violation_reduction,0.90350014,0.90326678,0.00023335999999999802,-0.00016674000000000078,0.0006666799999999973,0.001543558355996727,baseline deadline-violation rate - QoS-aware deadline-violation rate
+34.0,DIAG_TOTAL,50,deadline_penalized_delay_reduction_ms,418.48807999999997,416.06292,2.4251599999999987,-5.357440000000004,13.046419999999998,33.81473210602811,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+34.0,FAULT_TOTAL,50,pdr_gain,0.72355774,1.0,0.27644226,0.25496206,0.30546937999999996,0.09342698407821709,QoS-aware PDR - baseline PDR
+34.0,FAULT_TOTAL,50,deadline_violation_reduction,1.0,0.0,1.0,1.0,1.0,0.0,baseline deadline-violation rate - QoS-aware deadline-violation rate
+34.0,FAULT_TOTAL,50,deadline_penalized_delay_reduction_ms,1142.6204,3.0523962,1139.5680038,1128.7169886,1154.1734758,47.5805633738264,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+35.0,ALERT_TOTAL,50,pdr_gain,0.9054411,1.0,0.0945589,0.08283961999999999,0.11085325999999998,0.0524989086367614,QoS-aware PDR - baseline PDR
+35.0,ALERT_TOTAL,50,deadline_violation_reduction,1.0,0.0,1.0,1.0,1.0,0.0,baseline deadline-violation rate - QoS-aware deadline-violation rate
+35.0,ALERT_TOTAL,50,deadline_penalized_delay_reduction_ms,1477.6974,2.9368912,1474.7605088,1393.4003022000002,1607.8180424000002,419.8427775595889,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+35.0,DIAG_TOTAL,50,pdr_gain,0.138200032,0.135966672,-0.00223336,-0.006000027999999999,0.0014332280000000006,0.013348649659827627,QoS-aware PDR - baseline PDR
+35.0,DIAG_TOTAL,50,deadline_violation_reduction,0.9059332000000001,0.9056331799999999,0.0003000199999999986,-0.00016669999999999963,0.0007999799999999934,0.0017719818892749236,baseline deadline-violation rate - QoS-aware deadline-violation rate
+35.0,DIAG_TOTAL,50,deadline_penalized_delay_reduction_ms,416.26534,413.33816,2.9271800000000043,-4.875999999999994,13.220180000000001,33.02710640762852,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+35.0,FAULT_TOTAL,50,pdr_gain,0.70531816,1.0,0.29468184000000003,0.27406024,0.32293281999999995,0.08988681026358446,QoS-aware PDR - baseline PDR
+35.0,FAULT_TOTAL,50,deadline_violation_reduction,1.0,6.68002e-06,0.9999933199800001,0.9999799599400001,1.0,4.72348744046216e-05,baseline deadline-violation rate - QoS-aware deadline-violation rate
+35.0,FAULT_TOTAL,50,deadline_penalized_delay_reduction_ms,1114.9804000000001,3.052309,1111.928091,1099.8991036,1128.5556754,53.04734255386569,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+40.0,ALERT_TOTAL,50,pdr_gain,0.8812357,1.0,0.11876429999999999,0.10741257999999998,0.13372892,0.0484986871618023,QoS-aware PDR - baseline PDR
+40.0,ALERT_TOTAL,50,deadline_violation_reduction,1.0,0.0,1.0,1.0,1.0,0.0,baseline deadline-violation rate - QoS-aware deadline-violation rate
+40.0,ALERT_TOTAL,50,deadline_penalized_delay_reduction_ms,1442.1868,2.9474998,1439.2393002,1357.0184425999998,1577.0873556000004,432.05964733798317,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+40.0,DIAG_TOTAL,50,pdr_gain,0.109533272,0.10730003399999999,-0.0022332380000000015,-0.0066332200000000004,0.001833529999999998,0.015483887072075002,QoS-aware PDR - baseline PDR
+40.0,DIAG_TOTAL,50,deadline_violation_reduction,0.9115334,0.91156678,-3.337999999999841e-05,-0.0004001399999999955,0.00036666000000000086,0.0014480565003352746,baseline deadline-violation rate - QoS-aware deadline-violation rate
+40.0,DIAG_TOTAL,50,deadline_penalized_delay_reduction_ms,405.93154000000004,400.88620000000003,5.045340000000001,-5.575100000000001,21.215680000000003,49.89531830052407,baseline deadline-penalized delay - QoS-aware deadline-penalized delay
+40.0,FAULT_TOTAL,50,pdr_gain,0.62531386,1.0,0.37468614,0.3553304,0.3993710199999999,0.08112950637174404,QoS-aware PDR - baseline PDR
+40.0,FAULT_TOTAL,50,deadline_violation_reduction,1.0,1.34499e-05,0.9999865500999999,0.9999596503000001,1.0,9.510515496280877e-05,baseline deadline-violation rate - QoS-aware deadline-violation rate
+40.0,FAULT_TOTAL,50,deadline_penalized_delay_reduction_ms,989.69458,3.052158,986.6424219999999,975.4140804000001,1002.0150592,50.29510745238198,baseline deadline-penalized delay - QoS-aware deadline-penalized delay

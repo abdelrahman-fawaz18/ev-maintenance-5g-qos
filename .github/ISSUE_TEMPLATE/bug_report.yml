@@ -1,0 +1,34 @@
+name: Bug report
+description: Report a reproducible software or experiment-pipeline defect.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Please exclude raw proprietary data and include only the minimum reproducible evidence.
+  - type: input
+    id: versions
+    attributes:
+      label: Environment
+      description: OS, compiler, Python, ns-3 tag, and 5G-LENA tag.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Commands, configuration, seed, policy, and offered load.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior and relevant log excerpt
+    validations:
+      required: true

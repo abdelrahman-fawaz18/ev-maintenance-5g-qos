@@ -1,0 +1,26 @@
+name: Research extension
+description: Propose a scientifically motivated experiment or model extension.
+title: "[Extension]: "
+labels: [research]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Research question
+      description: State the mechanism or hypothesis the extension would test.
+    validations:
+      required: true
+  - type: textarea
+    id: changes
+    attributes:
+      label: Proposed design changes
+      description: Identify topology, traffic, radio, QoS, KPI, or statistical changes.
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation plan
+      description: Describe controls, seeds, comparisons, and expected artifacts.
+    validations:
+      required: true
