@@ -1,82 +1,159 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="800" viewBox="0 0 1440 800" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="760" viewBox="0 0 1600 760" role="img" aria-labelledby="title desc">
   <title id="title">EV maintenance telemetry and 5G QoS experiment architecture</title>
-  <desc id="desc">Vehicle ECUs feed diagnostic, alert, and fault applications. Traffic crosses a 5G NR uplink where baseline and QoS-aware scheduler policies are compared before delivery to a remote maintenance server and the measurement pipeline.</desc>
+  <desc id="desc">An electric vehicle produces diagnostic, alert, and fault telemetry. The traffic passes through an NR uplink where baseline and QoS-aware scheduler policies are compared before delivery to a remote maintenance server and measurement system.</desc>
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#31556f"/>
+    <linearGradient id="vehicleBody" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d9eef5"/>
+      <stop offset="0.55" stop-color="#83b9ca"/>
+      <stop offset="1" stop-color="#4f879b"/>
+    </linearGradient>
+    <linearGradient id="vehicleSide" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6fa5b8"/>
+      <stop offset="1" stop-color="#315d71"/>
+    </linearGradient>
+    <linearGradient id="mast" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d8e4eb"/>
+      <stop offset="1" stop-color="#7894a6"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-30%" width="140%" height="170%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#173f5f" flood-opacity="0.18"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#31556f"/>
     </marker>
     <style>
-      text{font-family:'DejaVu Sans',Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#102a43}.subtitle{font-size:15px;font-weight:400;fill:#526b7a}.section{font-size:15px;font-weight:700;fill:#173f5f;letter-spacing:.8px}.label{font-size:15px;font-weight:600;fill:#15324a}.small{font-size:13px;font-weight:400;fill:#466274}.tiny{font-size:12px;font-weight:600;fill:#31556f}.box{fill:#fff;stroke:#8fa9ba;stroke-width:1.5}.group{fill:#f7fafc;stroke:#b9c9d4;stroke-width:1.5}.line{fill:none;stroke:#31556f;stroke-width:2;marker-end:url(#arrow)}
+      text{font-family:'DejaVu Sans',Arial,sans-serif}.title{font-size:29px;font-weight:700;fill:#102a43}.subtitle{font-size:15px;font-weight:400;fill:#526b7a}.section{font-size:15px;font-weight:700;fill:#173f5f;letter-spacing:1.2px}.label{font-size:15px;font-weight:700;fill:#15324a}.body{font-size:13px;font-weight:400;fill:#466274}.micro{font-size:12px;font-weight:600;fill:#31556f}.panel{fill:#f7fafc;stroke:#b4c7d4;stroke-width:1.5}.box{fill:#fff;stroke:#8fa9ba;stroke-width:1.5}.flow{fill:none;stroke:#31556f;stroke-width:2.2;marker-end:url(#arrow)}
     </style>
   </defs>
-  <rect width="1440" height="800" fill="#ffffff"/>
-  <rect x="24" y="24" width="1392" height="752" rx="18" fill="#fbfdfe" stroke="#d3dee6"/>
+
+  <rect width="1600" height="760" fill="#fff"/>
+  <rect x="25" y="25" width="1550" height="710" rx="18" fill="#fbfdfe" stroke="#d3dee6"/>
   <text x="60" y="72" class="title">Reliability-aware 5G QoS for remote EV maintenance</text>
-  <text x="60" y="101" class="subtitle">Application semantics → QoS-flow mapping → scheduler decision → verified delivery evidence</text>
+  <text x="60" y="102" class="subtitle">Vehicle telemetry semantics  ·  QoS-flow classification  ·  scheduler policy  ·  verified delivery</text>
 
-  <rect x="60" y="140" width="360" height="500" rx="14" class="group"/>
-  <text x="84" y="174" class="section">ELECTRIC VEHICLE · UE</text>
-  <path d="M103 230 L135 196 H292 L329 230 H366 Q382 230 382 249 V278 H92 V249 Q92 230 103 230 Z" fill="#eaf2f7" stroke="#31556f" stroke-width="2"/>
-  <circle cx="148" cy="279" r="24" fill="#fff" stroke="#31556f" stroke-width="5"/><circle cx="326" cy="279" r="24" fill="#fff" stroke="#31556f" stroke-width="5"/>
-  <path d="M152 207 H224 V230 H130 Z M235 207 H286 L315 230 H235 Z" fill="#cfe2ee" stroke="#8fa9ba"/>
-  <text x="84" y="338" class="tiny">VEHICLE DATA SOURCES</text>
-  <rect x="84" y="354" width="140" height="55" rx="7" class="box"/><text x="154" y="378" text-anchor="middle" class="label">Battery / BMS</text><text x="154" y="397" text-anchor="middle" class="small">health telemetry</text>
-  <rect x="240" y="354" width="150" height="55" rx="7" class="box"/><text x="315" y="378" text-anchor="middle" class="label">Powertrain ECU</text><text x="315" y="397" text-anchor="middle" class="small">operating state</text>
-  <rect x="84" y="424" width="140" height="55" rx="7" class="box"/><text x="154" y="448" text-anchor="middle" class="label">Thermal ECU</text><text x="154" y="467" text-anchor="middle" class="small">temperature state</text>
-  <rect x="240" y="424" width="150" height="55" rx="7" class="box"/><text x="315" y="448" text-anchor="middle" class="label">Diagnostics ECU</text><text x="315" y="467" text-anchor="middle" class="small">fault detection</text>
-  <path d="M154 409 V493 M315 409 V493 M154 479 V493 H315 V479" fill="none" stroke="#8fa9ba" stroke-width="1.5"/>
-  <rect x="84" y="493" width="306" height="56" rx="7" fill="#eaf2f7" stroke="#6f91a8" stroke-width="1.5"/>
-  <text x="237" y="518" text-anchor="middle" class="label">Maintenance application layer</text><text x="237" y="538" text-anchor="middle" class="small">classification · packet generation · Tx ledger</text>
-  <rect x="84" y="568" width="92" height="48" rx="7" fill="#f1f5f9" stroke="#708090"/><text x="130" y="589" text-anchor="middle" class="label">DIAG</text><text x="130" y="607" text-anchor="middle" class="small">routine</text>
-  <rect x="191" y="568" width="92" height="48" rx="7" fill="#e8f1fb" stroke="#2563eb"/><text x="237" y="589" text-anchor="middle" class="label">ALERT</text><text x="237" y="607" text-anchor="middle" class="small">urgent</text>
-  <rect x="298" y="568" width="92" height="48" rx="7" fill="#fbeaea" stroke="#b91c1c"/><text x="344" y="589" text-anchor="middle" class="label">FAULT</text><text x="344" y="607" text-anchor="middle" class="small">critical</text>
+  <!-- Electric vehicle domain -->
+  <rect x="60" y="140" width="410" height="555" rx="14" class="panel"/>
+  <text x="86" y="175" class="section">ELECTRIC VEHICLE · UE</text>
 
-  <rect x="470" y="140" width="500" height="500" rx="14" class="group"/>
-  <text x="494" y="174" class="section">5G NR RADIO ACCESS NETWORK</text>
-  <rect x="494" y="201" width="170" height="90" rx="9" class="box"/><text x="579" y="229" text-anchor="middle" class="label">NR UE protocol stack</text><text x="579" y="252" text-anchor="middle" class="small">UDP/IP · SDAP · PDCP</text><text x="579" y="273" text-anchor="middle" class="small">uplink QoS classification</text>
-  <line x1="420" y1="592" x2="494" y2="246" class="line"/>
-  <rect x="699" y="197" width="235" height="99" rx="9" fill="#eef6fa" stroke="#557b92" stroke-width="1.5"/>
-  <text x="816" y="222" text-anchor="middle" class="label">QoS-flow mapping</text>
-  <text x="716" y="247" class="small">DIAG</text><text x="790" y="247" class="tiny">QFI 1 · default</text>
-  <text x="716" y="268" class="small">ALERT</text><text x="790" y="268" class="tiny">QFI 3 · 5QI 3</text>
-  <text x="716" y="289" class="small">FAULT</text><text x="790" y="289" class="tiny">QFI 4 · 5QI 83</text>
-  <line x1="664" y1="246" x2="699" y2="246" class="line"/>
+  <!-- Original isometric EV illustration -->
+  <g transform="translate(102 196)" filter="url(#shadow)">
+    <ellipse cx="130" cy="118" rx="122" ry="18" fill="#173f5f" opacity="0.13"/>
+    <path d="M14 69L48 36L155 22L224 54L276 69L281 101L260 114L40 114L10 96Z" fill="url(#vehicleBody)" stroke="#274f65" stroke-width="2"/>
+    <path d="M48 36L155 22L224 54L116 65Z" fill="#c9e1ea" stroke="#4b7488" stroke-width="1.5"/>
+    <path d="M116 65L224 54L276 69L165 84Z" fill="url(#vehicleSide)" stroke="#315d71" stroke-width="1.5"/>
+    <path d="M61 41L113 34L116 61L69 62Z" fill="#274f65" opacity="0.88"/>
+    <path d="M122 33L154 28L205 51L124 60Z" fill="#355f73" opacity="0.9"/>
+    <path d="M20 72L116 65L165 84L165 109L42 109L14 94Z" fill="#7fb4c5" opacity="0.75"/>
+    <path d="M165 84L276 69L279 96L260 108L165 109Z" fill="#3e7489" opacity="0.84"/>
+    <path d="M244 73L273 72L275 82L248 86Z" fill="#e8c36a"/>
+    <path d="M22 77L37 75L37 88L16 88Z" fill="#d95252" opacity="0.9"/>
+    <path d="M129 70L151 70L141 82L151 82L128 103L135 87L125 87Z" fill="#eaf6fa" opacity="0.95"/>
+    <g>
+      <ellipse cx="70" cy="108" rx="28" ry="28" fill="#18384a"/>
+      <ellipse cx="70" cy="108" rx="17" ry="17" fill="#b9d1dc"/>
+      <ellipse cx="70" cy="108" rx="7" ry="7" fill="#50788d"/>
+      <ellipse cx="228" cy="108" rx="28" ry="28" fill="#18384a"/>
+      <ellipse cx="228" cy="108" rx="17" ry="17" fill="#b9d1dc"/>
+      <ellipse cx="228" cy="108" rx="7" ry="7" fill="#50788d"/>
+    </g>
+  </g>
 
-  <text x="494" y="346" class="tiny">SHARED UPLINK · 3.5 GHz · 10 MHz · UMi STREET CANYON</text>
-  <line x1="520" y1="372" x2="905" y2="372" stroke="#31556f" stroke-width="3" marker-end="url(#arrow)"/>
-  <path d="M581 372 q32 -58 64 0 M598 372 q15 -30 30 0" fill="none" stroke="#2563eb" stroke-width="2"/>
-  <path d="M738 372 q32 -58 64 0 M755 372 q15 -30 30 0" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <text x="86" y="350" class="micro">ONBOARD DATA SOURCES</text>
+  <rect x="86" y="366" width="172" height="62" rx="8" class="box"/>
+  <text x="172" y="391" text-anchor="middle" class="label">Battery / BMS</text>
+  <text x="172" y="413" text-anchor="middle" class="body">health telemetry</text>
+  <rect x="276" y="366" width="168" height="62" rx="8" class="box"/>
+  <text x="360" y="391" text-anchor="middle" class="label">Powertrain ECU</text>
+  <text x="360" y="413" text-anchor="middle" class="body">operating state</text>
+  <rect x="86" y="446" width="172" height="62" rx="8" class="box"/>
+  <text x="172" y="471" text-anchor="middle" class="label">Thermal ECU</text>
+  <text x="172" y="493" text-anchor="middle" class="body">temperature state</text>
+  <rect x="276" y="446" width="168" height="62" rx="8" class="box"/>
+  <text x="360" y="471" text-anchor="middle" class="label">Diagnostics ECU</text>
+  <text x="360" y="493" text-anchor="middle" class="body">fault detection</text>
+  <path d="M172 428V523M360 428V523M172 508V523H360V508" fill="none" stroke="#94aaba" stroke-width="1.5"/>
 
-  <rect x="494" y="411" width="440" height="188" rx="10" class="box"/>
-  <text x="714" y="442" text-anchor="middle" class="label">Controlled scheduler comparison</text>
-  <rect x="518" y="461" width="184" height="108" rx="8" fill="#f8fafc" stroke="#7b8794"/>
-  <text x="610" y="486" text-anchor="middle" class="label">Baseline policy</text>
-  <text x="610" y="510" text-anchor="middle" class="small">OFDMA proportional fair</text>
-  <text x="610" y="532" text-anchor="middle" class="small">all traffic → QFI 1</text>
-  <text x="610" y="554" text-anchor="middle" class="small">shared best effort</text>
-  <rect x="726" y="461" width="184" height="108" rx="8" fill="#eaf2fb" stroke="#2563eb"/>
-  <text x="818" y="486" text-anchor="middle" class="label">QoS-aware policy</text>
-  <text x="818" y="510" text-anchor="middle" class="small">OFDMA QoS scheduler</text>
-  <text x="818" y="532" text-anchor="middle" class="small">dedicated urgent flows</text>
-  <text x="818" y="554" text-anchor="middle" class="small">priority under congestion</text>
+  <rect x="86" y="523" width="358" height="64" rx="8" fill="#eaf2f7" stroke="#668ba1" stroke-width="1.5"/>
+  <text x="265" y="549" text-anchor="middle" class="label">Maintenance telematics gateway</text>
+  <text x="265" y="572" text-anchor="middle" class="body">classification · packet generation · Tx ledger</text>
+  <rect x="86" y="607" width="105" height="54" rx="8" fill="#f1f5f9" stroke="#708090"/>
+  <text x="138" y="630" text-anchor="middle" class="label">DIAG</text>
+  <text x="138" y="650" text-anchor="middle" class="body">routine</text>
+  <rect x="212" y="607" width="105" height="54" rx="8" fill="#e8f1fb" stroke="#2563eb"/>
+  <text x="264" y="630" text-anchor="middle" class="label">ALERT</text>
+  <text x="264" y="650" text-anchor="middle" class="body">urgent</text>
+  <rect x="338" y="607" width="106" height="54" rx="8" fill="#fbeaea" stroke="#b91c1c"/>
+  <text x="391" y="630" text-anchor="middle" class="label">FAULT</text>
+  <text x="391" y="650" text-anchor="middle" class="body">critical</text>
 
-  <rect x="1020" y="140" width="360" height="500" rx="14" class="group"/>
-  <text x="1044" y="174" class="section">REMOTE MAINTENANCE DOMAIN</text>
-  <g transform="translate(1055 202)"><path d="M25 128 V46 M25 46 L7 128 M25 46 L44 128 M11 98 H39 M5 128 H46" fill="none" stroke="#31556f" stroke-width="4"/><path d="M25 56 q40 16 0 32 M25 70 q25 10 0 20" fill="none" stroke="#2563eb" stroke-width="2"/></g>
-  <text x="1130" y="247" class="label">Serving gNB</text><text x="1130" y="270" class="small">uplink reception</text><text x="1130" y="291" class="small">HARQ · TDD · FlowMonitor</text>
-  <line x1="934" y1="515" x2="1051" y2="330" class="line"/>
-  <rect x="1044" y="355" width="312" height="78" rx="8" class="box"/>
-  <text x="1200" y="384" text-anchor="middle" class="label">5G user plane</text>
-  <text x="1200" y="408" text-anchor="middle" class="small">non-bottleneck core transport</text>
-  <line x1="1200" y1="433" x2="1200" y2="468" class="line"/>
-  <rect x="1044" y="469" width="312" height="76" rx="8" fill="#eef6fa" stroke="#557b92"/>
-  <text x="1200" y="498" text-anchor="middle" class="label">Remote maintenance server</text>
-  <text x="1200" y="522" text-anchor="middle" class="small">class-specific UDP endpoints</text>
-  <line x1="1200" y1="545" x2="1200" y2="573" class="line"/>
-  <rect x="1044" y="574" width="312" height="43" rx="8" fill="#eaf4ed" stroke="#4f8364"/>
-  <text x="1200" y="601" text-anchor="middle" class="label">Delivery · latency · deadlines · throughput</text>
+  <!-- Radio access network -->
+  <rect x="505" y="140" width="605" height="555" rx="14" class="panel"/>
+  <text x="531" y="175" class="section">5G NR RADIO ACCESS NETWORK</text>
+  <rect x="538" y="214" width="190" height="104" rx="9" class="box"/>
+  <text x="633" y="244" text-anchor="middle" class="label">NR UE protocol stack</text>
+  <text x="633" y="269" text-anchor="middle" class="body">UDP/IP · SDAP · PDCP</text>
+  <text x="633" y="293" text-anchor="middle" class="body">uplink flow classification</text>
+  <path d="M470 634H500V266H538" class="flow"/>
 
-  <rect x="60" y="683" width="1320" height="56" rx="9" fill="#edf3f7" stroke="#b9c9d4"/>
-  <text x="82" y="706" class="tiny">EXPERIMENTAL CONTROL</text>
-  <text x="82" y="727" class="small">Same topology, channel model, offered load, and seed realization in each matched pair; only bearer activation and scheduler policy change.</text>
+  <rect x="776" y="204" width="294" height="124" rx="9" fill="#eef6fa" stroke="#557b92" stroke-width="1.5"/>
+  <text x="923" y="232" text-anchor="middle" class="label">Effective QoS-flow mapping</text>
+  <text x="801" y="260" class="body">DIAG</text><text x="878" y="260" class="micro">QFI 1 · default flow</text>
+  <text x="801" y="285" class="body">ALERT</text><text x="878" y="285" class="micro">QFI 3 · 5QI 3</text>
+  <text x="801" y="310" class="body">FAULT</text><text x="878" y="310" class="micro">QFI 4 · 5QI 83</text>
+  <path d="M728 266H776" class="flow"/>
+
+  <text x="537" y="370" class="micro">SHARED UPLINK · 3.5 GHz · 10 MHz · UMi STREET CANYON</text>
+  <line x1="564" y1="399" x2="1051" y2="399" stroke="#31556f" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M673 398q30-58 60 0M689 398q14-30 28 0M842 398q30-58 60 0M858 398q14-30 28 0" fill="none" stroke="#2563eb" stroke-width="2"/>
+
+  <rect x="538" y="443" width="532" height="216" rx="10" class="box"/>
+  <text x="804" y="474" text-anchor="middle" class="label">Controlled scheduler comparison</text>
+  <rect x="566" y="497" width="226" height="130" rx="9" fill="#f8fafc" stroke="#7b8794"/>
+  <text x="679" y="525" text-anchor="middle" class="label">Baseline policy</text>
+  <text x="679" y="552" text-anchor="middle" class="body">OFDMA proportional fair</text>
+  <text x="679" y="577" text-anchor="middle" class="body">all traffic on QFI 1</text>
+  <text x="679" y="602" text-anchor="middle" class="body">shared default treatment</text>
+  <rect x="816" y="497" width="226" height="130" rx="9" fill="#eaf2fb" stroke="#2563eb"/>
+  <text x="929" y="525" text-anchor="middle" class="label">QoS-aware policy</text>
+  <text x="929" y="552" text-anchor="middle" class="body">OFDMA QoS scheduler</text>
+  <text x="929" y="577" text-anchor="middle" class="body">dedicated urgent flows</text>
+  <text x="929" y="602" text-anchor="middle" class="body">priority under congestion</text>
+
+  <!-- Remote maintenance domain -->
+  <rect x="1145" y="140" width="395" height="555" rx="14" class="panel"/>
+  <text x="1171" y="175" class="section">REMOTE MAINTENANCE DOMAIN</text>
+
+  <!-- Original engineered gNB illustration -->
+  <g transform="translate(1182 205)" filter="url(#shadow)">
+    <ellipse cx="78" cy="188" rx="70" ry="14" fill="#173f5f" opacity="0.13"/>
+    <path d="M25 174L49 159H112L135 174L112 186H49Z" fill="#8eabb9" stroke="#31556f" stroke-width="2"/>
+    <path d="M58 40L32 165M92 40L119 165M75 35V166" fill="none" stroke="#31556f" stroke-width="6" stroke-linecap="round"/>
+    <path d="M51 75H99M44 108H106M38 141H113" fill="none" stroke="#6f8d9e" stroke-width="4"/>
+    <path d="M54 74L102 108M97 74L46 108M44 107L111 141M106 107L39 141M37 140L116 165M113 140L34 165" fill="none" stroke="#31556f" stroke-width="3"/>
+    <path d="M50 29L65 23L69 79L53 84L46 76Z" fill="#e4f0f5" stroke="#31556f" stroke-width="2"/>
+    <path d="M84 23L99 29L103 76L96 84L80 79Z" fill="#d2e5ed" stroke="#31556f" stroke-width="2"/>
+    <path d="M67 13H83L86 73L75 80L64 73Z" fill="#b9d8e4" stroke="#31556f" stroke-width="2"/>
+    <circle cx="75" cy="93" r="7" fill="#2563eb"/>
+    <path d="M91 78Q125 93 91 110M98 66Q153 93 98 122" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
+    <path d="M53 159H98V181H53Z" fill="#dce9ee" stroke="#31556f" stroke-width="2"/>
+    <path d="M98 159L112 166V181L98 181Z" fill="#7898a8" stroke="#31556f" stroke-width="2"/>
+  </g>
+  <text x="1337" y="241" class="label">Serving gNB</text>
+  <text x="1337" y="268" class="body">uplink reception</text>
+  <text x="1337" y="293" class="body">HARQ · scheduler · FlowMonitor</text>
+  <path d="M1110 399H1158L1190 326" class="flow"/>
+
+  <rect x="1180" y="426" width="325" height="76" rx="9" class="box"/>
+  <text x="1342" y="456" text-anchor="middle" class="label">5G user plane</text>
+  <text x="1342" y="480" text-anchor="middle" class="body">non-bottleneck core transport</text>
+  <path d="M1342 502V532" class="flow"/>
+  <rect x="1180" y="532" width="325" height="78" rx="9" fill="#eef6fa" stroke="#557b92"/>
+  <text x="1342" y="562" text-anchor="middle" class="label">Remote maintenance server</text>
+  <text x="1342" y="586" text-anchor="middle" class="body">class-specific UDP endpoints</text>
+  <rect x="1180" y="630" width="95" height="42" rx="7" fill="#edf6f0" stroke="#4f8364"/>
+  <text x="1228" y="656" text-anchor="middle" class="micro">PDR</text>
+  <rect x="1295" y="630" width="95" height="42" rx="7" fill="#edf6f0" stroke="#4f8364"/>
+  <text x="1342" y="656" text-anchor="middle" class="micro">LATENCY</text>
+  <rect x="1410" y="630" width="95" height="42" rx="7" fill="#edf6f0" stroke="#4f8364"/>
+  <text x="1458" y="656" text-anchor="middle" class="micro">DEADLINES</text>
 </svg>

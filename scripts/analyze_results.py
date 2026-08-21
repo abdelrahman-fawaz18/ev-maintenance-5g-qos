@@ -362,10 +362,10 @@ def plot_paired_effects(paired_rows: list[dict[str, Any]], out_dir: Path) -> Non
         ),
     )
     styles = {
-        "ALERT_TOTAL": {"color": "#2563eb", "marker": "o", "label": "ALERT"},
-        "FAULT_TOTAL": {"color": "#b91c1c", "marker": "s", "label": "FAULT"},
+        "ALERT_TOTAL": {"color": "#2563eb", "label": "ALERT"},
+        "FAULT_TOTAL": {"color": "#b91c1c", "label": "FAULT"},
     }
-    fig, axes = plt.subplots(1, 3, figsize=(13.2, 4.15), sharex=True)
+    fig, axes = plt.subplots(1, 3, figsize=(13.2, 4.9), sharex=True)
     fig.patch.set_facecolor("white")
     for ax, (metric, ylabel, scale) in zip(axes, panels):
         for traffic_class, style in styles.items():
@@ -386,8 +386,6 @@ def plot_paired_effects(paired_rows: list[dict[str, Any]], out_dir: Path) -> Non
                 x,
                 y,
                 color=style["color"],
-                marker=style["marker"],
-                markersize=4,
                 linewidth=2.1,
                 label=style["label"],
             )
@@ -399,19 +397,26 @@ def plot_paired_effects(paired_rows: list[dict[str, Any]], out_dir: Path) -> Non
         ax.spines["top"].set_visible(False)
         ax.spines["right"].set_visible(False)
     axes[-1].legend(frameon=False, loc="best")
-    fig.suptitle("Matched-seed effect of QoS-aware scheduling", fontweight="bold")
+    fig.suptitle(
+        "Matched-seed effect of QoS-aware scheduling",
+        x=0.5,
+        y=0.965,
+        fontsize=15,
+        fontweight="bold",
+    )
     fig.text(
         0.5,
-        0.94,
+        0.895,
         "Positive values favor QoS-aware scheduling; bands are 95% paired-bootstrap intervals",
         ha="center",
+        va="center",
         color="#64748b",
-        fontsize=9,
+        fontsize=9.5,
     )
-    fig.tight_layout(rect=(0, 0, 1, 0.90))
+    fig.subplots_adjust(left=0.075, right=0.985, bottom=0.15, top=0.74, wspace=0.28)
     fig.savefig(
         plot_dir / "paired_policy_effects_bootstrap_ci.png",
-        dpi=300,
+        dpi=220,
         bbox_inches="tight",
         facecolor="white",
     )
@@ -584,11 +589,11 @@ def plot_metric(
             "ytick.color": "#475569",
         }
     )
-    fig, axes = plt.subplots(1, 3, figsize=(13.2, 4.1), sharex=True)
+    fig, axes = plt.subplots(1, 3, figsize=(13.2, 4.8), sharex=True)
     fig.patch.set_facecolor("white")
     styles = {
-        "baseline": {"marker": "o", "color": "#e8590c", "label": "Baseline · PF"},
-        "slicing": {"marker": "s", "color": "#2563eb", "label": "QoS-aware"},
+        "baseline": {"color": "#e8590c", "label": "Baseline · PF"},
+        "slicing": {"color": "#2563eb", "label": "QoS-aware"},
     }
     for ax, cls in zip(axes, PAPER_CLASSES):
         ax.set_facecolor("#ffffff")
@@ -612,9 +617,6 @@ def plot_metric(
             ax.plot(
                 x,
                 y,
-                marker=style["marker"],
-                markersize=4.2,
-                markeredgewidth=0,
                 color=style["color"],
                 linewidth=2.2,
                 label=style["label"],
@@ -629,9 +631,25 @@ def plot_metric(
             ax.set_ylim(-0.04, 1.04)
     axes[0].set_ylabel(ylabel)
     axes[-1].legend(frameon=False, loc="best")
-    fig.text(0.5, 0.995, "Shaded bands show 95% bootstrap confidence intervals", ha="center", va="top", color="#64748b", fontsize=9)
-    fig.tight_layout(rect=(0, 0, 1, 0.965))
-    fig.savefig(plot_dir / filename, dpi=300, bbox_inches="tight", facecolor="white")
+    titles = {
+        "pdr": "Packet delivery ratio under increasing EV uplink load",
+        "mean_delay_ms": "Delivered-packet mean latency under increasing EV uplink load",
+        "deadline_violation_rate": "Deadline violations under increasing EV uplink load",
+        "deadline_penalized_mean_ms": "Deadline-penalized delay under increasing EV uplink load",
+        "throughput_mbps": "Received throughput under increasing EV uplink load",
+    }
+    fig.suptitle(titles[metric], x=0.5, y=0.965, fontsize=15, fontweight="bold")
+    fig.text(
+        0.5,
+        0.895,
+        "Lines show 50-seed means; shaded bands show 95% bootstrap confidence intervals",
+        ha="center",
+        va="center",
+        color="#64748b",
+        fontsize=9.5,
+    )
+    fig.subplots_adjust(left=0.07, right=0.985, bottom=0.15, top=0.76, wspace=0.25)
+    fig.savefig(plot_dir / filename, dpi=220, bbox_inches="tight", facecolor="white")
     plt.close(fig)
 
 

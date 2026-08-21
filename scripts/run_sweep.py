@@ -347,7 +347,7 @@ def plot_metric(sweep_root: Path, summary: list[dict[str, Any]], metric: str, yl
     plot_dir.mkdir(parents=True, exist_ok=True)
     fig, axes = plt.subplots(1, 3, figsize=(13.2, 4.0), sharex=True)
     for ax, cls in zip(axes, PAPER_CLASSES):
-        for scenario, marker in (("baseline", "o"), ("slicing", "s")):
+        for scenario in ("baseline", "slicing"):
             rows = sorted(
                 [
                     row
@@ -360,7 +360,7 @@ def plot_metric(sweep_root: Path, summary: list[dict[str, Any]], metric: str, yl
                 continue
             x = [float(row["ev_background_load_mbps"]) for row in rows]
             y = [float(row[f"{metric}_mean"]) for row in rows]
-            ax.plot(x, y, marker=marker, linewidth=1.8, label=scenario)
+            ax.plot(x, y, linewidth=1.8, label=scenario)
         ax.set_title(cls.replace("_TOTAL", ""))
         ax.set_xlabel("EV best-effort load [Mbps]")
         ax.grid(True, alpha=0.25)

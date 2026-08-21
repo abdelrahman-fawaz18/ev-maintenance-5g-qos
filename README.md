@@ -26,7 +26,25 @@ Both policies use the same one-gNB/one-EV topology, 3.5 GHz carrier, 10 MHz chan
 
 ## Experimental evidence
 
-The finalized design contains **2 policies × 26 loads × 50 seeds = 2,600 simulations**, forming 1,300 matched policy pairs. The analysis computes a policy delta inside each load/seed/class pair, then applies 10,000 deterministic bootstrap resamples to report 95% confidence intervals. Positive deltas favor QoS-aware scheduling.
+The finalized design contains **2 policies × 26 loads × 50 seeds = 2,600 simulations**, forming 1,300 matched policy pairs. Lines show seed-level means and shaded regions show 95% bootstrap confidence intervals from 10,000 deterministic resamples.
+
+### Delivery continuity
+
+The PDR curves show where congestion becomes packet loss. DIAG falls sharply under both policies because it remains best effort. ALERT and FAULT separate from the baseline after the congestion transition: QoS-aware scheduling preserves complete delivery across the evaluated sweep, while baseline delivery declines as contention increases.
+
+![Packet delivery ratio for DIAG, ALERT, and FAULT with 95% bootstrap confidence intervals](results/figures/paper_pdr_bootstrap_ci.png)
+
+### Delivered-packet latency
+
+Latency exposes degradation before delivery collapses. Baseline ALERT and FAULT move from millisecond-scale service into a roughly 1.5–1.7 s queueing regime, while their QoS-aware curves remain near 3 ms. DIAG latency rises under both policies, reinforcing that protection is selective. Because this metric includes only received packets, it must be read together with PDR.
+
+![Delivered-packet mean latency for DIAG, ALERT, and FAULT with 95% bootstrap confidence intervals](results/figures/paper_mean_latency_bootstrap_ci.png)
+
+### Matched policy effect
+
+The paired analysis subtracts the two policies inside every matched load/seed/class realization before bootstrapping. Positive values therefore quantify the benefit attributable to QoS-aware treatment rather than differences between unrelated random samples. The effect becomes pronounced after the transition region, especially for FAULT delivery and urgent-flow delay.
+
+![Matched-seed PDR, deadline, and delay effects across the offered-load sweep](results/figures/paired_policy_effects_bootstrap_ci.png)
 
 | Load | Class | PDR gain [pp] | Deadline violations avoided [pp] | Penalized delay reduced [ms] |
 |---:|---|---:|---:|---:|
@@ -34,8 +52,6 @@ The finalized design contains **2 policies × 26 loads × 50 seeds = 2,600 simul
 | 30 Mbps | FAULT | 18.927 [16.296, 22.433] | 99.998 [99.995, 100.000] | 1,271 [1,265, 1,278] |
 | 40 Mbps | ALERT | 11.876 [10.741, 13.373] | 100.000 [100.000, 100.000] | 1,439 [1,357, 1,577] |
 | 40 Mbps | FAULT | 37.469 [35.533, 39.937] | 99.999 [99.996, 100.000] | 987 [975, 1,002] |
-
-![Matched-seed policy effects across the offered-load sweep](results/figures/paired_policy_effects_bootstrap_ci.png)
 
 The complete [paired-effect table](results/tables/paired_policy_effects_bootstrap_ci.csv), [selected-load table](results/tables/paired_policy_effects_selected_loads.md), [seed-level KPI dataset](results/tables/paper_seed_level_kpis.csv), and [integrity audit](results/sweep_audit.md) are versioned with the code. The [results narrative](docs/results.md) states the interpretation and limits of the evidence.
 
